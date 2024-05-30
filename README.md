@@ -10,7 +10,7 @@ Pour une comparaison avec les résultats obtenus dans Matlab (toolbox PDE), les 
 *   **nodes.csv** : liste des noeud du maillage avec leurs coordonnées, obtenue dans Matlab
 *   **elements.csv** : liste des triangles dont les sommets sont désignés par des index dans la liste des noeuds
 *   **solution.csv** : solution de l'approximation obtenue dans Matlab
-*   **labels.csv** : labels associés aux noeuds (0 : inconnue, 1 : condition aux limites avec r1, 2 : conditions aux limites avec r2)
+*   **labels.csv** : labels associés aux noeuds (0 : inconnue, 1 : condition aux limites avec r1, 2 : condition aux limites avec r2)
 *   **params.csv** : paramètres r1, r2, V1, V2, a, f
 
 La fonction **coaxial_matlab** réalise cette comparaison.
