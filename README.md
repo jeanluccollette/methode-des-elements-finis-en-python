@@ -23,4 +23,4 @@ Le fichier notebook fourni genère les fichiers **CSV** permettant la comparaiso
 
 ## Version Code
 
-Les programmes de test peuvent être lancés directement dans une console **Python**. Si on dispose de **Matlab**, le fichier **elements_finis.m** permet éventuellement de tester d'autres configuration, en générant les fichiers **CSV** associés.
+Les programmes de test peuvent être lancés directement dans une console **Python**. Si on dispose de **Matlab**, le fichier **elements_finis.m** permet éventuellement de tester d'autres configurations, en générant les fichiers **CSV** associés.
