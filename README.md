@@ -27,4 +27,5 @@ Les programmes de test peuvent être lancés directement dans une console **Pyth
 
 ## Site intéressant
 Dans le programme **elements_finis.py** (fonction **sys_lin**), les matrices dites de masse et de rigidité sont calculées simultanément. Le détail des calculs est décrit dans le site ci-dessous.
+
 https://bthierry.pages.math.cnrs.fr/course-fem/lecture/elements-finis-triangulaires/contributions-elementaires/
