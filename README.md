@@ -26,5 +26,5 @@ Le fichier notebook fourni genère les fichiers **CSV** permettant la comparaiso
 Les programmes de test peuvent être lancés directement dans une console **Python**. Si on dispose de **Matlab**, le fichier **elements_finis.m** permet éventuellement de tester d'autres configurations, en générant les fichiers **CSV** associés.
 
 ## Site intéressant
-Dans le programme **elements_finis.py**, les matrices dites de masse et de rigidité sont calculées simultanément. Le détail des calculs est décrit dans le site ci-dessous.
+Dans le programme **elements_finis.py** (fonction **sys_lin**), les matrices dites de masse et de rigidité sont calculées simultanément. Le détail des calculs est décrit dans le site ci-dessous.
 https://bthierry.pages.math.cnrs.fr/course-fem/lecture/elements-finis-triangulaires/contributions-elementaires/
