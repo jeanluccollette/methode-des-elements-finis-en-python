@@ -6,22 +6,14 @@ from scipy.sparse import csr_array
 from scipy.sparse.linalg import spsolve
 
 
-def adj_triangles(triangles, points):
-    liste_adj_triangles = []
-    for noeud in range(points.shape[0]):
-        index_triangles = np.where(np.any(triangles == noeud, axis=1))[0]
-        liste_adj_triangles.append(index_triangles)
-    return liste_adj_triangles
-
-
 def jacobiens(triangles, points):
-    liste_jacobiens = []
+    liste_jacobiens = np.zeros((triangles.shape[0]))
     for tri in range(triangles.shape[0]):
         vec1 = [points[triangles[tri, 1], 0]-points[triangles[tri, 0], 0],
                 points[triangles[tri, 1], 1]-points[triangles[tri, 0], 1]]
         vec2 = [points[triangles[tri, 2], 0]-points[triangles[tri, 0], 0],
                 points[triangles[tri, 2], 1]-points[triangles[tri, 0], 1]]
-        liste_jacobiens.append(np.abs(np.linalg.det([vec1, vec2])))
+        liste_jacobiens[tri] = np.abs(np.linalg.det([vec1, vec2]))
     return liste_jacobiens
 
 
@@ -164,8 +156,8 @@ def init_maillage_coaxial_circ(r1=0.2, r2=1.0):
     x = (r*np.cos(angles)).flatten()
     y = (r*np.sin(angles)).flatten()
 
-    points = np.array([[0, 0]])
-    labels = np.array([-1], dtype=np.int64)
+    points = np.empty((0, 2))
+    labels = np.empty((0), dtype=np.int64)
     for k in range(x.shape[0]):
         points = np.append(points, [[x[k], y[k]]], axis=0)
         if np.abs(x[k]**2+y[k]**2 - (r1**2)) < 1e-10:
@@ -175,13 +167,17 @@ def init_maillage_coaxial_circ(r1=0.2, r2=1.0):
         else:
             labels = np.append(labels, 0)
 
+    points = np.append(points, [[0, 0]], axis=0)
+    labels = np.append(labels, -1)
+
     # Perform Delaunay triangulation
     tri = Delaunay(points)
+
     triangles = tri.simplices
-    noeud = 0
-    liste_adj_triangles = adj_triangles(triangles, points)
-    index_tri = liste_adj_triangles[noeud]
+    index_tri = np.where(np.any(triangles == points.shape[0]-1, axis=1))[0]
     triangles = np.delete(triangles, index_tri, axis=0)
+    points = np.delete(points, -1, axis=0)
+    labels = np.delete(labels, -1)
 
     return triangles, points, labels
 
@@ -247,8 +243,8 @@ def init_maillage_coaxial_hexa(r1=0.2, r2=1.0):
     a1cer = np.arange(0, 2*np.pi, 2*np.pi/32)
     a2cer = np.arange(0, 2*np.pi, 2*np.pi/100)
 
-    points = np.array([[0, 0]])
-    labels = np.array([-1], dtype=np.int64)
+    points = np.empty((0, 2))
+    labels = np.empty((0), dtype=np.int64)
     for a1 in a1cer:
         points = np.append(points, [[r1*np.cos(a1), r1*np.sin(a1)]], axis=0)
         labels = np.append(labels, 1)
@@ -280,13 +276,17 @@ def init_maillage_coaxial_hexa(r1=0.2, r2=1.0):
     points = np.delete(points, np.where(labels == -2)[0], axis=0)
     labels = np.delete(labels, np.where(labels == -2)[0])
 
+    points = np.append(points, [[0, 0]], axis=0)
+    labels = np.append(labels, -1)
+
     # Perform Delaunay triangulation
     tri = Delaunay(points)
+
     triangles = tri.simplices
-    noeud = 0
-    liste_adj_triangles = adj_triangles(triangles, points)
-    index_tri = liste_adj_triangles[noeud]
+    index_tri = np.where(np.any(triangles == points.shape[0]-1, axis=1))[0]
     triangles = np.delete(triangles, index_tri, axis=0)
+    points = np.delete(points, -1, axis=0)
+    labels = np.delete(labels, -1)
 
     return triangles, points, labels
 
