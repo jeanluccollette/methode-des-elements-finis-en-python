@@ -31,5 +31,5 @@ Dans le programme **elements_finis.py** (fonction **sys_lin**), les matrices dit
 https://bthierry.pages.math.cnrs.fr/course-fem/lecture/elements-finis-triangulaires/contributions-elementaires/
 
 ## Illustrations
-![image info](Images/circ_maillage.png)
-![image info](Images/circ_sol.png)
+!["Maillage circulaire"](Images/circ_maillage.png)
+!["Solution"](Images/circ_sol.png)
