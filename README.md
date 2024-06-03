@@ -66,3 +66,29 @@ Le maillage est généré avec **Python**.
 La solution est calculée avec la fonction **solve_edp**.
 
 ![](Images/hexa_sol.png)
+
+## Autres géométries
+
+### Comparaison avec Matlab
+
+Le maillage est récupéré à partir des données générées dans Matlab.
+
+![](Images/carre_matl_maillage.png)
+
+La solution est calculée avec la fonction **solve_edp**.
+
+![](Images/carre_matl_sol.png)
+
+On compare la solution calculée avec la fonction **solve_edp** et celle de Matlab, pour valider le programme **Python** fourni.
+
+![](Images/carre_matl_err.png)
+
+### Maillage à base de carrés
+
+Le maillage est généré avec **Python**.
+
+![](Images/carre_pyth_maillage.png)
+
+La solution est calculée avec la fonction **solve_edp**.
+
+![](Images/arre_pyth_sol.png)
