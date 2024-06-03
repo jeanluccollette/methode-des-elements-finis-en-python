@@ -35,11 +35,11 @@ https://bthierry.pages.math.cnrs.fr/course-fem/lecture/elements-finis-triangulai
 ## Illustrations
 ### Comparaison avec Matlab
 
-Le maillage est récupéré à partir des données générées dans Matlab
+Le maillage est récupéré à partir des données générées dans Matlab.
 
 ![](Images/matl_maillage.png)
 
-La solution est calculée avec la fonction **solve_edp**
+La solution est calculée avec la fonction **solve_edp**.
 
 ![](Images/matl_sol.png)
 
