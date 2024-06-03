@@ -2,18 +2,20 @@
 
 ## Description des programmes
 
-Une résolution numérique de l'équation  −Δu+au=f  est proposée, avec un domaine de définition  Ω  qui est la section d'un coaxial (rayon interne r1 et rayon externe r2) et des conditions aux limites de Dirichlet aux frontières (u1 sur le cercle de rayon r1 et u2 sur le cercle de rayon r2).
+Une résolution numérique de l'équation $-\Delta u+au=f$ est proposée dans ce notebook, avec un domaine de définition $\Omega$ qui est la section d'un coaxial (rayon interne r1 et rayon externe r2) et des conditions aux limites de Dirichlet aux frontières (u1 sur le cercle de rayon r1 et u2 sur le cercle de rayon r2).
 
 Pour une comparaison avec les résultats obtenus dans Matlab (toolbox PDE), les données issues de Matlab sont sauvegardés dans les fichiers ci-dessous
 
-nodes.csv : liste des noeud du maillage avec leurs coordonnées, obtenue dans Matlab
-elements.csv : liste des triangles dont les sommets sont désignés par des index dans la liste des noeuds
-solution.csv : solution de l'approximation obtenue dans Matlab
-labels.csv : labels associés aux noeuds (0 : inconnue, 1 : condition aux limites avec r1, 2 : condition aux limites avec r2)
-params.csv : paramètres r1, r2, u1, u2, a, f
-La fonction coaxial_matlab réalise cette comparaison.
 
-Les fonctions coaxial_circ et coaxial_hexa utilisent uniquement Python pour générer le maillage et obtenir l'approximation de la solution.
+*   **nodes.csv** : liste des noeud du maillage avec leurs coordonnées, obtenue dans Matlab
+*   **elements.csv** : liste des triangles dont les sommets sont désignés par des index dans la liste des noeuds
+*   **solution.csv** : solution de l'approximation obtenue dans Matlab
+*   **labels.csv** : labels associés aux noeuds (0 : inconnue, 1 : condition aux limites avec r1, 2 : condition aux limites avec r2)
+*   **params.csv** : paramètres r1, r2, u1, u2, a, f
+
+La fonction **coaxial_matlab** réalise cette comparaison.
+
+Les fonctions **coaxial_circ** et **coaxial_hexa** utilisent uniquement Python pour générer le maillage et obtenir l'approximation de la solution.
 
 ## Version Notebook
 
