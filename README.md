@@ -13,7 +13,7 @@ Pour une comparaison avec les résultats obtenus dans Matlab (toolbox PDE), les 
 *   **labels.csv** : labels associés aux noeuds (0 : inconnue, 1 : condition aux limites avec r1, 2 : condition aux limites avec r2)
 *   **params.csv** : paramètres r1, r2, u1, u2, a, f
 
-La fonction **coaxial_matlab** réalise cette comparaison.
+La fonction **coaxial_matl** réalise cette comparaison.
 
 Les fonctions **coaxial_circ** et **coaxial_hexa** utilisent uniquement Python pour générer le maillage et obtenir l'approximation de la solution.
 
