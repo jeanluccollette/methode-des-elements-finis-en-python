@@ -17,7 +17,7 @@ La fonction **coaxial_matl** réalise cette comparaison.
 
 Les fonctions **coaxial_circ** et **coaxial_hexa** utilisent uniquement Python pour générer le maillage et obtenir l'approximation de la solution.
 
-La fonction **solve_edp** dans **elements_finis.py** peut s'appliquer à d'autres géométries que celles données dans les exemples. Cependant, il faudra aussi définer préalablement le maillage, avec la construction des listes **triangles**, **points** et **labels**.
+La fonction **solve_edp** dans **elements_finis.py** peut s'appliquer à d'autres géométries que celles données dans les exemples. Cependant, il faudra aussi définer préalablement le maillage, avec la construction des listes **triangles**, **points** et **labels**. En complément de ce choix d'autres géométries, il est par ailleurs possible d'imposer aussi des condition de Neumann homogènes (voir le fichier **domaine_carre.zip** dans le dossier **Code**, ainsi que les Illustrations)
 
 ## Version Notebook
 
