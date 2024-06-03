@@ -25,7 +25,7 @@ Le fichier notebook fourni genère les fichiers **CSV** permettant la comparaiso
 
 ## Version Code
 
-Les programmes de test peuvent être lancés directement dans une console **Python**. Si on dispose de **Matlab**, le fichier **elements_finis.m** permet éventuellement de tester d'autres configurations, en générant les fichiers **CSV** associés.
+Les programmes donnés en exemple peuvent être lancés directement dans une console **Python**. Si on dispose de **Matlab**, le fichier **elements_finis.m** permet éventuellement de tester d'autres configurations, en générant les fichiers **CSV** associés.
 
 ## Site intéressant
 Dans le programme **elements_finis.py** (fonction **solve_edp**), les matrices dites de masse et de rigidité sont calculées simultanément. Le détail des calculs est décrit dans le site ci-dessous.
@@ -34,12 +34,19 @@ https://bthierry.pages.math.cnrs.fr/course-fem/lecture/elements-finis-triangulai
 
 ## Illustrations
 ### Comparaison avec Matlab
+Le maillage est récupéré à partir des données générées dans Matlab
 ![](Images/matl_maillage.png)
+La solution est calculée avec la fonction **solve_edp**
 ![](Images/matl_sol.png)
+On compare la solution calculée avec la fonction **solve_edp** et celle de Matlab, pour valider le programme **Python** fourni.
 ![](Images/matl_err.png)
 ### Maillage circulaire
+Le maillage est généré avec **Python**.
 ![](Images/circ_maillage.png)
+La solution est calculée avec la fonction **solve_edp**.
 ![](Images/circ_sol.png)
 ### Maillage hexagonal
+Le maillage est généré avec **Python**.
 ![](Images/hexa_maillage.png)
+La solution est calculée avec la fonction **solve_edp**.
 ![](Images/hexa_sol.png)
