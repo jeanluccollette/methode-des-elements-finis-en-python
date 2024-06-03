@@ -91,4 +91,4 @@ Le maillage est généré avec **Python**.
 
 La solution est calculée avec la fonction **solve_edp**.
 
-![](Images/arre_pyth_sol.png)
+![](Images/carre_pyth_sol.png)
