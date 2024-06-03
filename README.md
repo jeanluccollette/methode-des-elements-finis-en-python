@@ -2,7 +2,7 @@
 
 ## Description des programmes
 
-Une résolution numérique de l'équation $-\Delta u+au=f$ est proposée dans ce notebook, avec un domaine de définition $\Omega$ qui est la section d'un coaxial (rayon interne r1 et rayon externe r2) et des conditions aux limites de Dirichlet aux frontières (u1 sur le cercle de rayon r1 et u2 sur le cercle de rayon r2).
+Une résolution numérique de l'équation $-\Delta u+au=f$ est proposée dans ce notebook, avec des exemples où le domaine de définition $\Omega$ est la section d'un coaxial (rayon interne r1 et rayon externe r2) et des conditions aux limites de Dirichlet aux frontières (u1 sur le cercle de rayon r1 et u2 sur le cercle de rayon r2).
 
 Pour une comparaison avec les résultats obtenus dans Matlab (toolbox PDE), les données issues de Matlab sont sauvegardés dans les fichiers ci-dessous
 
@@ -16,6 +16,8 @@ Pour une comparaison avec les résultats obtenus dans Matlab (toolbox PDE), les 
 La fonction **coaxial_matl** réalise cette comparaison.
 
 Les fonctions **coaxial_circ** et **coaxial_hexa** utilisent uniquement Python pour générer le maillage et obtenir l'approximation de la solution.
+
+La fonction **solve_edp** dans **elements_finis.py** peut s'appliquer à d'autres géométries que celles données dans les exemples. Cependant, il faudra aussi définer préalablement le maillage, avec la construction des listes **triangles**, **points** et **labels**.
 
 ## Version Notebook
 
