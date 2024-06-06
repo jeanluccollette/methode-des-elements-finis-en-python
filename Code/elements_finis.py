@@ -52,15 +52,16 @@ def solve_edp(triangles, points, labels, a, f, cond_lim):
             grad_i = grad[ordre_tri, 0:2]
             k = index_k[noeud]
             if labels[noeud] == 0:
-                B[k] = B[k] + f*jac/6
+                B[k] = B[k] + f[noeud]*jac/12
                 ligne.append(k)
                 colonne.append(k)
-                valeur.append(jac * (np.dot(grad_i, grad_i)/2+a/12))
+                valeur.append(jac * (np.dot(grad_i, grad_i)/2+a[noeud]/12))
                 for n_vois in [-1, 1]:
                     noeud_voisin = triangle[(ordre_tri+n_vois) % 3]
                     k_vois = index_k[noeud_voisin]
                     grad_j = grad[(ordre_tri+n_vois) % 3, 0:2]
-                    val = jac * (np.dot(grad_i, grad_j)/2+a/24)
+                    val = jac * (np.dot(grad_i, grad_j)/2+a[noeud_voisin]/24)
+                    B[k] = B[k] + f[noeud_voisin]*jac/24
                     if labels[noeud_voisin] == 0:
                         ligne.append(k)
                         colonne.append(k_vois)
