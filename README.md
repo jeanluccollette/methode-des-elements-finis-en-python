@@ -37,35 +37,35 @@ https://bthierry.pages.math.cnrs.fr/course-fem/lecture/elements-finis-triangulai
 
 Le maillage est récupéré à partir des données générées dans Matlab.
 
-![](Images/matl_maillage.png)
+![](Images/coaxial_matl_maillage.png)
 
 La solution est calculée avec la fonction **solve_edp**.
 
-![](Images/matl_sol.png)
+![](Images/coaxial_matl_sol.png)
 
 On compare la solution calculée avec la fonction **solve_edp** et celle de Matlab, pour valider le programme **Python** fourni.
 
-![](Images/matl_err.png)
+![](Images/coaxial_matl_err.png)
 
 ### Maillage circulaire
 
 Le maillage est généré avec **Python**.
 
-![](Images/circ_maillage.png)
+![](Images/coaxial_circ_maillage.png)
 
 La solution est calculée avec la fonction **solve_edp**.
 
-![](Images/circ_sol.png)
+![](Images/coaxial_circ_sol.png)
 
 ### Maillage hexagonal
 
 Le maillage est généré avec **Python**.
 
-![](Images/hexa_maillage.png)
+![](Images/coaxial_hexa_maillage.png)
 
 La solution est calculée avec la fonction **solve_edp**.
 
-![](Images/hexa_sol.png)
+![](Images/coaxial_hexa_sol.png)
 
 ## Autres géométries
 
