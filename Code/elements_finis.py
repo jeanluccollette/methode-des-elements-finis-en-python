@@ -3,37 +3,27 @@ from scipy.sparse import csr_array
 from scipy.sparse.linalg import spsolve
 
 
-def jacobiens(triangles, points):
-    liste_jacobiens = np.zeros((triangles.shape[0]))
-    for tri in range(triangles.shape[0]):
-        vec1 = [points[triangles[tri, 1], 0]-points[triangles[tri, 0], 0],
-                points[triangles[tri, 1], 1]-points[triangles[tri, 0], 1]]
-        vec2 = [points[triangles[tri, 2], 0]-points[triangles[tri, 0], 0],
-                points[triangles[tri, 2], 1]-points[triangles[tri, 0], 1]]
-        liste_jacobiens[tri] = np.abs(np.linalg.det([vec1, vec2]))
-    return liste_jacobiens
-
-
-def gradients(triangles, points):
-    liste_gradients = np.zeros((triangles.shape[0], 3, 3))
-    for k in range(triangles.shape[0]):
-        a = np.zeros((3, 3))
-        for m in range(3):
-            a[m, :] = [points[triangles[k, m], 0],
-                       points[triangles[k, m], 1], 1]
-        for m in range(3):
-            b = np.zeros((3, 1))
-            b[m] = 1
-            sol = np.linalg.solve(a, b)
-            liste_gradients[k, m, :] = sol.T
-    return liste_gradients
+def coeffDM(trs, pts):
+    liste_coeffD = np.zeros((trs.shape[0], 3, 3))
+    liste_coeffM = np.zeros((trs.shape[0], 3, 3))
+    Dphi = np.array([[-1, -1], [1, 0], [0, 1]])
+    for tr in range(trs.shape[0]):
+        xp = pts[trs[tr, :], 0]
+        yp = pts[trs[tr, :], 1]
+        detJp = (xp[1]-xp[0])*(yp[2]-yp[0]) - (xp[2]-xp[0])*(yp[1]-yp[0])
+        Kp = np.abs(detJp)/2
+        Bp = np.array([[yp[2]-yp[0], yp[0]-yp[1]],
+                      [xp[0]-xp[2], xp[1]-xp[0]]])/detJp
+        liste_coeffM[tr, :, :] = (
+            Kp/12)*np.array([[2, 1, 1], [1, 2, 1], [1, 1, 2]])
+        liste_coeffD[tr, :, :] = Kp*Dphi@Bp.T@Bp@Dphi.T
+    return liste_coeffD, liste_coeffM
 
 
 def solve_edp(triangles, points, labels, a, f, cond_lim):
 
     print('Génération des listes')
-    liste_jacobiens = jacobiens(triangles, points)
-    liste_gradients = gradients(triangles, points)
+    liste_coeffD, liste_coeffM = coeffDM(triangles, points)
 
     print('Génération des matrices de masse et de rigidité')
     index_k = np.zeros(labels.shape[0], dtype=np.int64)
@@ -45,23 +35,22 @@ def solve_edp(triangles, points, labels, a, f, cond_lim):
     valeur = []
     for n_tri in range(triangles.shape[0]):
         triangle = triangles[n_tri]
-        jac = liste_jacobiens[n_tri]
-        grad = liste_gradients[n_tri, :, 0:2]
         ordre_tri = 0
         for noeud in triangle:
-            grad_i = grad[ordre_tri, 0:2]
             k = index_k[noeud]
             if labels[noeud] == 0:
-                B[k] = B[k] + f[noeud]*jac/12
+                B[k] = B[k] + f*liste_coeffM[n_tri, ordre_tri, ordre_tri]
                 ligne.append(k)
                 colonne.append(k)
-                valeur.append(jac * (np.dot(grad_i, grad_i)/2+a[noeud]/12))
+                valeur.append(liste_coeffD[n_tri, ordre_tri, ordre_tri] +
+                              a*liste_coeffM[n_tri, ordre_tri, ordre_tri])
                 for n_vois in [-1, 1]:
                     noeud_voisin = triangle[(ordre_tri+n_vois) % 3]
                     k_vois = index_k[noeud_voisin]
-                    grad_j = grad[(ordre_tri+n_vois) % 3, 0:2]
-                    val = jac * (np.dot(grad_i, grad_j)/2+a[noeud_voisin]/24)
-                    B[k] = B[k] + f[noeud_voisin]*jac/24
+                    val = liste_coeffD[n_tri, ordre_tri, (
+                        ordre_tri+n_vois) % 3]+a*liste_coeffM[n_tri, ordre_tri, (ordre_tri+n_vois) % 3]
+                    B[k] = B[k] + f * \
+                        liste_coeffM[n_tri, ordre_tri, (ordre_tri+n_vois) % 3]
                     if labels[noeud_voisin] == 0:
                         ligne.append(k)
                         colonne.append(k_vois)
