@@ -32,6 +32,10 @@ Dans le programme **elements_finis.py** (fonction **solve_edp**), les matrices d
 
 https://bthierry.pages.math.cnrs.fr/course-fem/lecture/elements-finis-triangulaires/contributions-elementaires/
 
+Dans la version PDF ci-dessous, on retrouve le détail des calculs dans le chapitre 3.4 "Calcul des Matrices Élémentaires".
+
+https://bthierry.pages.math.cnrs.fr/course-fem/download/FEM.pdf
+
 ## Illustrations
 ### Comparaison avec Matlab
 
