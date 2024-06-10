@@ -77,6 +77,8 @@ Le maillage est récupéré à partir des données générées dans Matlab.
 
 La solution est calculée avec la fonction **solve_edp**.
 
+On a $a(x,y)=1$ et $f(x,y)=\(x-\dfrac{D}{2}\)^2+\(y-\dfrac{D}{2}\)^2$
+
 ![](Images/carre_matl_sol.png)
 
 On compare la solution calculée avec la fonction **solve_edp** et celle de Matlab, pour valider le programme **Python** fourni.
