@@ -41,6 +41,8 @@ Le maillage est récupéré à partir des données générées dans Matlab.
 
 La solution est calculée avec la fonction **solve_edp**.
 
+On impose $a(x,y)=2$ et $f(x,y)=10x$.
+
 ![](Images/coaxial_matl_sol.png)
 
 On compare la solution calculée avec la fonction **solve_edp** et celle de Matlab, pour valider le programme **Python** fourni.
@@ -55,6 +57,8 @@ Le maillage est généré avec **Python**.
 
 La solution est calculée avec la fonction **solve_edp**.
 
+On impose $a(x,y)=2$ et $f(x,y)=10x$.
+
 ![](Images/coaxial_circ_sol.png)
 
 ### Maillage hexagonal
@@ -64,6 +68,8 @@ Le maillage est généré avec **Python**.
 ![](Images/coaxial_hexa_maillage.png)
 
 La solution est calculée avec la fonction **solve_edp**.
+
+On impose $a(x,y)=2$ et $f(x,y)=10x$.
 
 ![](Images/coaxial_hexa_sol.png)
 
@@ -77,7 +83,7 @@ Le maillage est récupéré à partir des données générées dans Matlab.
 
 La solution est calculée avec la fonction **solve_edp**.
 
-On impose $a(x,y)=1$ et $f(x,y)=\dfrac{1}{20}\left(\left(x-\dfrac{D}{2}\right)^2+\left(y-\dfrac{D}{2}\right)^2\right)$
+On impose $a(x,y)=1$ et $f(x,y)=\dfrac{1}{20}\left(\left(x-\dfrac{D}{2}\right)^2+\left(y-\dfrac{D}{2}\right)^2\right)$.
 
 ![](Images/carre_matl_sol.png)
 
@@ -93,6 +99,6 @@ Le maillage est généré avec **Python**.
 
 La solution est calculée avec la fonction **solve_edp**.
 
-On impose $a(x,y)=1$ et $f(x,y)=\dfrac{1}{20}\left(\left(x-\dfrac{D}{2}\right)^2+\left(y-\dfrac{D}{2}\right)^2\right)$
+On impose $a(x,y)=1$ et $f(x,y)=\dfrac{1}{20}\left(\left(x-\dfrac{D}{2}\right)^2+\left(y-\dfrac{D}{2}\right)^2\right)$.
 
 ![](Images/carre_pyth_sol.png)
