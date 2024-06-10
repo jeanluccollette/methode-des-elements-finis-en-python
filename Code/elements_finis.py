@@ -40,8 +40,8 @@ def solve_edp(triangles, points, labels, a, f, cond_lim):
         f_xy = f(x, y)
         Dp = liste_Dp[n_tri, :, :]
         Kp = liste_Kp[n_tri]
-        s_tri = 0
-        for noeud in triangle:
+        for s_tri in range(3):
+            noeud = triangle[s_tri]
             if labels[noeud] == 0:
                 k = index_k[noeud]
                 B[k] = B[k] + f_xy*Kp/3
@@ -50,8 +50,8 @@ def solve_edp(triangles, points, labels, a, f, cond_lim):
                 valeur.append(Dp[s_tri, s_tri] + a_xy*Kp/6)
                 for vois in [-1, 1]:
                     s_vois = (s_tri+vois) % 3
-                    noeud_voisin = triangle[s_vois]
                     val = Dp[s_tri, s_vois] + a_xy*Kp/12
+                    noeud_voisin = triangle[s_vois]
                     if labels[noeud_voisin] == 0:
                         k_vois = index_k[noeud_voisin]
                         ligne.append(k)
@@ -60,7 +60,6 @@ def solve_edp(triangles, points, labels, a, f, cond_lim):
                     for clim in range(len(cond_lim)):
                         if labels[noeud_voisin] == cond_lim[clim][0]:
                             B[k] = B[k] - cond_lim[clim][1]*val
-            s_tri = s_tri+1
     A = csr_array((valeur, (ligne, colonne)),
                   shape=(len(inconnus), len(inconnus)))
 
