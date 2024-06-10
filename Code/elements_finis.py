@@ -48,11 +48,12 @@ def solve_edp(triangles, points, labels, a, f, cond_lim):
                 ligne.append(k)
                 colonne.append(k)
                 valeur.append(Dp[s_tri, s_tri] + a_xy*Kp/6)
-                for s_vois in [-1, 1]:
-                    noeud_voisin = triangle[(s_tri+s_vois) % 3]
-                    k_vois = index_k[noeud_voisin]
-                    val = Dp[s_tri, (s_tri+s_vois) % 3] + a_xy*Kp/12
+                for vois in [-1, 1]:
+                    s_vois = (s_tri+vois) % 3
+                    noeud_voisin = triangle[s_vois]
+                    val = Dp[s_tri, s_vois] + a_xy*Kp/12
                     if labels[noeud_voisin] == 0:
+                        k_vois = index_k[noeud_voisin]
                         ligne.append(k)
                         colonne.append(k_vois)
                         valeur.append(val)
