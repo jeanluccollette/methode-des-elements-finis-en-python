@@ -77,7 +77,7 @@ Le maillage est récupéré à partir des données générées dans Matlab.
 
 La solution est calculée avec la fonction **solve_edp**.
 
-On a $a(x,y)=1$ et $f(x,y)=\(x-\dfrac{D}{2}\)^2+\(y-\dfrac{D}{2}\)^2$
+On a $a(x,y)=1$ et $f(x,y)=\dfrac{1}{20}\left(\left(x-\dfrac{D}{2}\)^2+\(y-\dfrac{D}{2}\right)^2\right)$
 
 ![](Images/carre_matl_sol.png)
 
