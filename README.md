@@ -11,7 +11,7 @@ Pour une comparaison avec les résultats obtenus dans Matlab (toolbox PDE), les 
 *   **elements.csv** : liste des triangles dont les sommets sont désignés par des index dans la liste des noeuds
 *   **solution.csv** : solution de l'approximation obtenue dans Matlab
 *   **labels.csv** : labels associés aux noeuds (0 : inconnue, 1 : condition aux limites avec r1, 2 : condition aux limites avec r2)
-*   **params.csv** : paramètres r1, r2, u1, u2, a, f
+*   **params.csv** : paramètres r1, r2, u1, u2 (a et f sont des fonctions de x et de y)
 
 La fonction **coaxial_matl** réalise cette comparaison.
 
