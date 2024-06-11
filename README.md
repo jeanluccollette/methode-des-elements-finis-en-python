@@ -107,7 +107,7 @@ On impose $a(x,y)=1$ et $f(x,y)=\dfrac{1}{20}\left(\left(x-\dfrac{D}{2}\right)^2
 
 ![](Images/carre_pyth_sol.png)
 
-### Maillage avec GMSH
+### Maillage du domaine carré avec GMSH
 
 Le maillage est généré avec la version Python de GMSH. Le paramètre **lc** de la fonction **carre_gmsh** est la dimension moyenne d'un élément du maillage.
 
@@ -118,3 +118,15 @@ La solution est calculée avec la fonction **solve_edp**.
 On impose $a(x,y)=1$ et $f(x,y)=\dfrac{1}{20}\left(\left(x-\dfrac{D}{2}\right)^2+\left(y-\dfrac{D}{2}\right)^2\right)$.
 
 ![](Images/carre_gmsh_sol.png)
+
+### Maillage du domaine coaxial avec GMSH
+
+Le maillage est généré avec la version Python de GMSH. Le paramètre **h** de la fonction **coaxial_gmsh** est la dimension moyenne d'un élément du maillage.
+
+![](Images/coaxial_gmsh_maillage.png)
+
+La solution est calculée avec la fonction **solve_edp**.
+
+On impose $a(x,y)=2$ et $f(x,y)=10x$.
+
+![](Images/coaxial_gmsh_sol.png)
