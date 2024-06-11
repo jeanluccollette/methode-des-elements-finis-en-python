@@ -17,7 +17,7 @@ La fonction **coaxial_matl** réalise cette comparaison. Les fonctions **coaxial
  
 La fonction **solve_edp** dans **elements_finis.py** peut s'appliquer à d'autres géométries que celles données dans les exemples. Cependant, il faudra aussi définir préalablement le maillage, avec la construction des listes **triangles**, **points** et **labels**. En complément de ce choix d'autres géométries, il est par ailleurs possible d'imposer aussi des conditions de Neumann homogènes (voir le fichier **domaine_carre.zip** dans le dossier **Code**, ainsi que les illustrations).
 
-Pour générer automatiquement le maillage, le générateur **GMSH** (https://gmsh.info/) est disponible. La version en Python (https://pypi.org/project/gmsh/) a été testée. Le fichier archive **domaine_carre_gmsh.zip** (dans le dossier **Code**) contient les programmes permettant de tester la résolution avec le maillage obtenu (voir aussi les illustrations).
+Pour générer automatiquement le maillage, le générateur **GMSH** (https://gmsh.info/) est disponible. La version en Python (https://pypi.org/project/gmsh/) a été testée. Les fichiers archive **domaine_carre_gmsh.zip** et **domaine_coaxial_gmsh.zip** (dans le dossier **Code**) contiennent les programmes permettant de tester la résolution avec le maillage obtenu (voir aussi les illustrations).
 
 ## Version Notebook
 
