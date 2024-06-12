@@ -2,17 +2,18 @@
 
 ## Motivation
 L'ensemble des résolutions numériques d'équations aux dérivées partielles, effectuées avec les différents programmes proposés ici, est loin d'être exhaustif. On se limite par ailleurs à des problèmes à deux dimensions, des conditions aux limites et des géométries particulières.
-Cependant, la fonction **solve_edp** dans le fichier **elements_finis.py**, utilisée dans tous les exemples traités, ne nécessite que les packages mentionnés ci-dessous.
+Cependant, la fonction **solve_edp** dans le fichier **elements_finis.py** (voir dans le dossier **Code**), utilisée dans tous les exemples traités, ne nécessite que les packages mentionnés ci-dessous.
 ```
 import numpy as np
 from scipy.sparse import csr_array
 from scipy.sparse.linalg import spsolve
 ```
 Il est ainsi possible de tester facilement la méthode des éléments finis, sans recourir à des environnements très complets et très performants comme **FEniCS** (https://fenicsproject.org/), mais dont l'installation et la prise en main sont tout de même assez complexes.
-Pour le maillage, quelques méthodes "ad hoc" sont proposées. Certains exemples font aussi appel au générateur de maillage **GMSH**, dont la version en **Python** est aisément installable via la commande ci-dessous (https://pypi.org/project/gmsh/).
+Pour le maillage, quelques méthodes "ad hoc" sont proposées. La mise en oeuvre de ces méthodes est facilitée par les fonctions de triangulation disponibles dans **matplotlib.tri** (triangulation de Delaunay, par exemple). Certains exemples font aussi appel au générateur de maillage **GMSH**, dont la version en **Python** est aisément installable via la commande ci-dessous (https://pypi.org/project/gmsh/).
 ```
 pip install gmsh
 ```
+D'autres maillages avec d'autres géométries peuvent être testés, à vous la main :-)
 
 ## Description des programmes
 
