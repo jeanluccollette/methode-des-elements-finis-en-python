@@ -51,7 +51,7 @@ Dans la version PDF ci-dessous, on retrouve le détail des calculs dans le chapi
 
 https://bthierry.pages.math.cnrs.fr/course-fem/download/FEM.pdf
 
-## Illustrations
+## Illustrations avec un domaine coaxial
 ### Comparaison avec Matlab
 
 Le maillage est récupéré à partir des données générées dans Matlab.
@@ -92,7 +92,7 @@ On impose $a(x,y)=2$ et $f(x,y)=10x$.
 
 ![](Images/coaxial_hexa_sol.png)
 
-## Autres géométries
+## Illustrations avec un domaine carré
 
 ### Comparaison avec Matlab
 
@@ -121,6 +121,8 @@ La solution est calculée avec la fonction **solve_edp**.
 On impose $a(x,y)=1$ et $f(x,y)=\dfrac{1}{20}\left(\left(x-\dfrac{D}{2}\right)^2+\left(y-\dfrac{D}{2}\right)^2\right)$.
 
 ![](Images/carre_pyth_sol.png)
+
+## Illustrations avec utilisation de GMSH
 
 ### Maillage du domaine coaxial avec GMSH
 
