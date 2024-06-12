@@ -1,13 +1,14 @@
 # Méthode des éléments finis en Python
 
 ## Motivation
-L'ensemble des résolutions numériques d'équations aux dérivées partielles effectuées avec les différents programmes proposés ici est loin d'être exhaustif. On se limite par ailleurs à des problèmes à deux dimensions.
+L'ensemble des résolutions numériques d'équations aux dérivées partielles, effectuées avec les différents programmes proposés ici, est loin d'être exhaustif. On se limite par ailleurs à des problèmes à deux dimensions et des géométries particulières.
 Cependant, la fonction **solve_edp** dans le fichier **elements_finis.py**, utilisée dans tous les exemples traités, ne nécessite que les packages mentionnés ci-dessous.
 ```
 import numpy as np
 from scipy.sparse import csr_array
 from scipy.sparse.linalg import spsolve
 ```
+Il est ainsi possible de tester facilement la méthode des éléments finis, sans recourir à des environnements très complets comme **FEniCS** (https://fenicsproject.org/), mais dont l'installation et la prise en main sont tout de même assez complexes.
 
 ## Description des programmes
 
