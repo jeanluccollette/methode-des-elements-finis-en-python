@@ -1,5 +1,12 @@
 # Méthode des éléments finis en Python
 
+## Motivation
+```
+import numpy as np
+from scipy.sparse import csr_array
+from scipy.sparse.linalg import spsolve
+```
+
 ## Description des programmes
 
 Une résolution numérique de l'équation $-\Delta u+au=f$ est proposée dans ce notebook, avec des exemples où le domaine de définition $\Omega$ est la section d'un coaxial (rayon interne r1 et rayon externe r2) et des conditions aux limites de Dirichlet aux frontières (u1 sur le cercle de rayon r1 et u2 sur le cercle de rayon r2).
