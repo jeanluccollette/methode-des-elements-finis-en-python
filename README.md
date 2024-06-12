@@ -68,7 +68,7 @@ On compare la solution calculée avec la fonction **solve_edp** et celle de Matl
 
 ![](Images/coaxial_matl_err.png)
 
-### Maillage circulaire
+### Maillage "ad hoc" circulaire
 
 Le maillage est généré avec **Python**.
 
@@ -80,7 +80,7 @@ On impose $a(x,y)=2$ et $f(x,y)=10x$.
 
 ![](Images/coaxial_circ_sol.png)
 
-### Maillage hexagonal
+### Maillage "ad hoc" hexagonal
 
 Le maillage est généré avec **Python**.
 
@@ -110,7 +110,7 @@ On compare la solution calculée avec la fonction **solve_edp** et celle de Matl
 
 ![](Images/carre_matl_err.png)
 
-### Maillage à base de carrés
+### Maillage "ad hoc" à base de carrés
 
 Le maillage est généré avec **Python**.
 
