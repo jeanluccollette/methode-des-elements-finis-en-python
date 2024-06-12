@@ -25,7 +25,7 @@ Le fichier notebook fourni genère les fichiers **CSV** permettant la comparaiso
 
 ## Version Code
 
-Les programmes donnés en exemple peuvent être lancés directement dans une console **Python**. Si on dispose de **Matlab**, le fichier **coaxial_matl.m** permet éventuellement de tester d'autres configurations, en générant les fichiers **CSV** associés.
+Les programmes donnés en exemple peuvent être lancés directement dans une console **Python**. Si on dispose de **Matlab**, les fichiers **carre_matl.m** et **coaxial_matl.m** permettent éventuellement de tester d'autres configurations, en générant les fichiers **CSV** associés.
 
 ## Site intéressant
 Dans le programme **elements_finis.py** (fonction **solve_edp**), les matrices dites de masse et de rigidité sont calculées simultanément. Le détail des calculs est décrit dans le site ci-dessous.
