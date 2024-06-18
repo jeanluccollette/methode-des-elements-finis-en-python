@@ -40,14 +40,14 @@ Pour générer automatiquement le maillage, le générateur **GMSH** (https://gm
 
 ## Version Notebook
 
-Le fichier notebook fourni genère les fichiers **CSV** permettant la comparaison avec **Matlab** pour une configuration particulière des paramètres. Dans l'état, il peut être directement utilisable dans **Google Colaboratory**, par exemple.
+Le fichier notebook [elements_finis.ipynb](Notebook/elements_finis.ipynb) fourni genère les fichiers **CSV** permettant la comparaison avec **Matlab** pour une configuration particulière des paramètres. Dans l'état, il peut être directement utilisable dans **Google Colaboratory**, par exemple.
 
 ## Version Code
 
 Les programmes donnés en exemple peuvent être lancés directement dans une console **Python**. Si on dispose de **Matlab**, les fichiers **carre_matl.m** et **coaxial_matl.m** permettent éventuellement de tester d'autres configurations, en générant les fichiers **CSV** associés.
 
 ## Site intéressant
-Dans le programme **elements_finis.py** (fonction **solve_edp**), les matrices dites de masse et de rigidité sont calculées simultanément. Le détail des calculs est décrit dans le site ci-dessous.
+Dans le programme [**elements_finis.py**](Code/elements_finis.py) (fonction **solve_edp**), les matrices dites de masse et de rigidité sont calculées simultanément. Le détail des calculs est décrit dans le site ci-dessous.
 
 https://bthierry.pages.math.cnrs.fr/course-fem/lecture/elements-finis-triangulaires/contributions-elementaires/
 
