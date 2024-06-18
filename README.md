@@ -32,11 +32,11 @@ Pour une comparaison avec les résultats obtenus dans Matlab (toolbox PDE), les 
 *   **labels.csv** : labels associés aux noeuds (0 : inconnue, 1 : condition aux limites avec r1, 2 : condition aux limites avec r2)
 *   **params.csv** : paramètres r1, r2, u1, u2 (a et f sont des fonctions de x et de y)
 
-La fonction **coaxial_matl** réalise cette comparaison. Les fonctions **coaxial_circ** et **coaxial_hexa** utilisent uniquement Python pour générer le maillage et obtenir l'approximation de la solution. Le fichier archive **domaine_coaxial.zip** (dans le dossier **Code**) contient les programmes permettant de tester ces fonctions.
+La fonction **coaxial_matl** réalise cette comparaison. Les fonctions **coaxial_circ** et **coaxial_hexa** utilisent uniquement Python pour générer le maillage et obtenir l'approximation de la solution. Le fichier archive [**domaine_coaxial.zip**](Code/domaine_coaxial.zip) (dans le dossier **Code**) contient les programmes permettant de tester ces fonctions.
  
-La fonction **solve_edp** dans [**elements_finis.py**](Code/elements_finis.py) peut s'appliquer à d'autres géométries que celles données dans les exemples. Cependant, il faudra aussi définir préalablement le maillage, avec la construction des listes **triangles**, **points** et **labels**. En complément de ce choix d'autres géométries, il est par ailleurs possible d'imposer aussi des conditions de Neumann homogènes (voir le fichier **domaine_carre.zip** dans le dossier **Code**, ainsi que les illustrations).
+La fonction **solve_edp** dans [**elements_finis.py**](Code/elements_finis.py) peut s'appliquer à d'autres géométries que celles données dans les exemples. Cependant, il faudra aussi définir préalablement le maillage, avec la construction des listes **triangles**, **points** et **labels**. En complément de ce choix d'autres géométries, il est par ailleurs possible d'imposer aussi des conditions de Neumann homogènes (voir le fichier [**domaine_carre.zip**](Code/domaine_carre.zip) dans le dossier **Code**, ainsi que les illustrations).
 
-Pour générer automatiquement le maillage, le générateur **GMSH** (https://gmsh.info/) est disponible. La version en Python (https://pypi.org/project/gmsh/) a été testée. Les fichiers archive **domaine_carre_gmsh.zip** et **domaine_coaxial_gmsh.zip** (dans le dossier **Code**) contiennent les programmes permettant de tester la résolution avec le maillage obtenu (voir aussi les illustrations).
+Pour générer automatiquement le maillage, le générateur **GMSH** (https://gmsh.info/) est disponible. La version en Python (https://pypi.org/project/gmsh/) a été testée. Les fichiers archive [**domaine_carre_gmsh.zip**](Code/domaine_carre_gmsh.zip) et [**domaine_coaxial_gmsh.zip**](Code/domaine_coaxial_gmsh.zip) (dans le dossier **Code**) contiennent les programmes permettant de tester la résolution avec le maillage obtenu (voir aussi les illustrations).
 
 ## Version Notebook
 
