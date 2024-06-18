@@ -2,7 +2,7 @@
 
 ## Motivation
 L'ensemble des résolutions numériques d'équations aux dérivées partielles, effectuées avec les différents programmes proposés ici, est loin d'être exhaustif. On se limite par ailleurs à des problèmes à deux dimensions, des conditions aux limites et des géométries particulières.
-Cependant, la fonction **solve_edp** dans le fichier **elements_finis.py** (voir dans le dossier **Code**), utilisée dans tous les exemples traités, ne nécessite que les packages mentionnés ci-dessous.
+Cependant, la fonction **solve_edp** dans le fichier [**elements_finis.py**](Code/elements_finis.py) (voir dans le dossier **Code**), utilisée dans tous les exemples traités, ne nécessite que les packages mentionnés ci-dessous.
 
 ```python
 import numpy as np
