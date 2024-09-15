@@ -11,7 +11,7 @@ from scipy.sparse.linalg import spsolve
 ```
 
 Il est ainsi possible de tester facilement la méthode des éléments finis, sans recourir à des environnements très complets et très performants comme **FEniCS** (https://fenicsproject.org/), mais dont l'installation et la prise en main sont tout de même assez complexes.
-Pour le maillage, quelques méthodes "ad hoc" sont proposées. La mise en oeuvre de ces méthodes est facilitée par les fonctions de triangulation disponibles dans **matplotlib.tri** (triangulation de Delaunay, par exemple). Certains exemples font aussi appel au générateur de maillage **GMSH**, dont la version en **Python** est aisément installable via la commande ci-dessous (https://pypi.org/project/gmsh/).
+Pour le maillage, quelques méthodes "ad hoc" sont proposées. La mise en œuvre de ces méthodes est facilitée par les fonctions de triangulation disponibles dans **matplotlib.tri** (triangulation de Delaunay, par exemple). Certains exemples font aussi appel au générateur de maillage **GMSH**, dont la version en **Python** est aisément installable via la commande ci-dessous (https://pypi.org/project/gmsh/).
 
 ```python
 pip install gmsh
