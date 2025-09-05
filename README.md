@@ -106,7 +106,9 @@ Le maillage est récupéré à partir des données générées dans Matlab.
 
 La solution est calculée avec la fonction **solve_edp**.
 
-On impose $a(x,y)=1$ et $f(x,y)=\dfrac{1}{20}\left(\left(x-\dfrac{D}{2}\right)^2+\left(y-\dfrac{D}{2}\right)^2\right)$.
+On impose $a(x,y)=1$ et
+
+$f(x,y)=\dfrac{1}{20}\left(\left(x-\dfrac{D}{2}\right)^2+\left(y-\dfrac{D}{2}\right)^2\right)$.
 
 ![](Images/carre_matl_sol.png)
 
@@ -122,7 +124,9 @@ Le maillage est généré avec **Python**.
 
 La solution est calculée avec la fonction **solve_edp**.
 
-On impose $a(x,y)=1$ et $f(x,y)=\dfrac{1}{20}\left(\left(x-\dfrac{D}{2}\right)^2+\left(y-\dfrac{D}{2}\right)^2\right)$.
+On impose $a(x,y)=1$ et
+
+$f(x,y)=\dfrac{1}{20}\left(\left(x-\dfrac{D}{2}\right)^2+\left(y-\dfrac{D}{2}\right)^2\right)$.
 
 ![](Images/carre_pyth_sol.png)
 
@@ -148,6 +152,8 @@ Le maillage est généré avec la version Python de GMSH. Le paramètre **h** de
 
 La solution est calculée avec la fonction **solve_edp**.
 
-On impose $a(x,y)=1$ et $f(x,y)=\dfrac{1}{20}\left(\left(x-\dfrac{D}{2}\right)^2+\left(y-\dfrac{D}{2}\right)^2\right)$.
+On impose $a(x,y)=1$ et
+
+$f(x,y)=\dfrac{1}{20}\left(\left(x-\dfrac{D}{2}\right)^2+\left(y-\dfrac{D}{2}\right)^2\right)$.
 
 ![](Images/carre_gmsh_sol.png)
